@@ -45,10 +45,23 @@
     padding-top: 50px;
 }
 
+.wall{
+    height: 300px;
+    width: 18px;
+    background-color: #f4a95e;
+}
+@keyframes left-to-right {
+        0%{
+                transform: translateX(-100%);
+        }
+        100%{
+            transform: translateX(0%);
+        }
+}
 .text {
+    animation: left-to-right 1s 1;
     height: auto;
     padding: 10px;
-    border-left: 5px solid #f4a95e;
     text-align: justify;
 }
 
@@ -197,23 +210,30 @@
     justify-content: center;
     align-items: center;
     text-align: center;
+    box-shadow: -1px 0px 8px 7px rgba(36,30,30,0.3);
     transition: all 0.5s ease-in-out;
     position: relative;
 }
 .card-shape-1{
     clip-path: polygon(0 0, 100% 0, 100% 100%, 96% 100%, 96% 4%, 0 4%);
-    background-color: red;
-    height: 160px;
-    width:160px;
+    background-color: white;
+    height: 40%;
+    width:40%;
     position: absolute;
-    top: 233%;
-    left: 387px;
-  
+    top: 0;
+    right: 0;
     z-index: 3;
-
+    transition: all 0.5s ease-in-out;
 }
 .card-shape-2{
-
+    position: absolute;
+    height: 40%;
+    width: 40%;
+    background-color: white;
+    clip-path: polygon(0 0, 4% 0, 4% 96%, 100% 96%, 100% 100%, 0 100%);
+    left: 0;
+    bottom: 0;
+    transition: all 0.5s ease-in-out;
 }
 
 .service-cards i:hover {
@@ -223,6 +243,14 @@
 .service-cards:hover {
     background-color: #f4a95e;
     color: white;
+}
+.service-cards:hover .card-shape-1{
+    height: 50%;
+    width: 50%;
+}
+.service-cards:hover .card-shape-2{
+    height: 50%;
+    width: 50%;
 }
 
 /*-------------------------------------------------------------portfolio start-------------------------------------------------------------*/
