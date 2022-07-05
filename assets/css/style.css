@@ -36,7 +36,10 @@
 .navbar i {
     font-size: 24px;
 }
-
+.mx-3 {
+    /* margin-right: 0px !important; */
+    margin-left: 0px !important;
+}
 .pic:hover
 
 /* -----------------------------------------------------------after header start----------------------------------------------------------- */
@@ -46,7 +49,7 @@
 }
 
 .wall{
-    height: 300px;
+    height: 320px;
     width: 18px;
     background-color: #f4a95e;
 }
@@ -426,6 +429,11 @@
         margin: 100px 0px 100px 0px;
         position:static;
     }
+    .wall{
+        width: 13px;
+        height: 290px;
+        margin-top: 65px;
+    }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
@@ -435,6 +443,11 @@
         margin: 100px 0px 100px 0px;
         position:static;
         cursor: pointer;
+    }
+    .wall{
+        width: 13px;
+        height: 275px;
+        margin-top: 65px;
     }
 }
 /* Large devices (laptops/desktops, 992px and up) */
@@ -473,6 +486,11 @@
     .box i{
         font-size: 25px;
     }
+    .wall{
+        width: 10px;
+        height: 285px;
+        margin-top: 65px;
+    }
     
 }
 
@@ -489,6 +507,11 @@
         color: white;
         position: relative;
         right: 40px;
+    }
+    .wall{
+        width: 20px;
+        height: 340px;
+        margin-top: 65px;
     }
 }
 
@@ -510,6 +533,10 @@
         position: relative;
         right: 40px;
     }
+    .wall{
+        width: 20px;
+        margin-top: 61px;
+    }
     
 }
 
@@ -526,5 +553,10 @@
         color: white;
         position: relative;
         right: 40px;
+    }
+    .wall{
+        width: 18px;
+        height: 320px;
+        margin-top: 63px;
     }
 }
