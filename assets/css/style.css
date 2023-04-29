@@ -4,6 +4,9 @@
 }
 
 /* -----------------------------------------------------------navbar start----------------------------------------------------------- */
+.logo h1{
+    color: #f4a95e;
+}
 .icons i:Hover {
     color: #f4a95e;
     cursor: pointer;
@@ -45,7 +48,8 @@
 /* -----------------------------------------------------------after header start----------------------------------------------------------- */
 .after-header {
     background-color: #F0F0F0;
-    padding-top: 50px;
+    padding-top: 50px; 
+
 }
 
 .wall{
@@ -108,8 +112,8 @@
 .shape-2,
 .shape-1 {
     position: absolute;
-    height: 40%;
-    width: 40%;
+    height: 30%;
+    width: 30%;
     clip-path: polygon(0 0, 4% 0, 4% 96%, 100% 96%, 100% 100%, 0 100%);
     left: 0;
     bottom: 0;
@@ -131,7 +135,6 @@
 .shape-animate:hover .shape-1 ,.shape-animate:hover  .shape-2 {
     height: 50%;
     width: 50%;
-   
 }
 /* -----------------------------------------------------------about start----------------------------------------------------------- */
 .about {
@@ -144,13 +147,14 @@
     background-color: #f4a95e;
     width: 170px;
 }
-.atb-pic{
+.abt-pic{
     position: relative;
 }
 
 .host-box {
     position: absolute;
     cursor: pointer;
+    width: 50% !important;
 }
 .box {
     background-color: #f4a95e;
@@ -164,11 +168,37 @@
 .box p {
     font-size: 22px;
 }
-
 .box i {
     color: #c8d6e5;
 }
 
+.drawing-2,
+.drawing-1 {
+    position: absolute;
+    height: 30%;
+    width: 30%;
+    clip-path: polygon(0 0, 4% 0, 4% 96%, 100% 96%, 100% 100%, 0 100%);
+    left: 0;
+    bottom: 0;
+    transition: all 1.5s ease-in-out;
+}
+
+.drawing-1 {
+    top: 0;
+    right: 0;
+    bottom: auto;
+    left: auto;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 96% 100%, 96% 4%, 0 4%);
+    z-index: 3;
+
+}
+.drawing-2{
+    background-color: #f4a95e;
+}
+.shape-animate:hover .drawing-1 ,.shape-animate:hover  .drawing-2 {
+    height: 50%;
+    width: 50%;
+}
 .about .hidden-border {
     visibility: hidden;
     height: 42px;
@@ -216,6 +246,10 @@
     box-shadow: -1px 0px 8px 7px rgba(36,30,30,0.3);
     transition: all 0.5s ease-in-out;
     position: relative;
+}
+.service-cards img{
+    height: 5em;
+    width: 5em;
 }
 .card-shape-1{
     clip-path: polygon(0 0, 100% 0, 100% 100%, 96% 100%, 96% 4%, 0 4%);
@@ -273,10 +307,18 @@
     position: relative;
     transform: scale(1);
 }
-
 .portfolio-pic:hover {
     transform: scale(1.05);
     cursor: pointer;
+}
+#four, #five{
+    background-color:#d1d4d4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-weight: bolder;
+
 }
 
 .shed {
@@ -543,7 +585,7 @@
 /* XX-Large devices (larger desktops, 1600px and up) */
 @media only screen and (min-width: 1600px){
     .host-box{
-       top: 1023px;
+       top: 918px;
     }
     .box {
         background-color: #f4a95e;
@@ -555,8 +597,8 @@
         right: 40px;
     }
     .wall{
-        width: 18px;
-        height: 320px;
+        width: 16px;
+        height: 293px;
         margin-top: 63px;
     }
 }
