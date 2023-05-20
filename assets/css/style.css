@@ -4,18 +4,23 @@
 }
 
 /* -----------------------------------------------------------navbar start----------------------------------------------------------- */
+
 .logo h1{
     color: #f4a95e;
 }
-.icons i:Hover {
+.icons-max i:Hover {
+    color: #f4a95e;
+    cursor: pointer;
+}
+.icons-min i:Hover {
     color: #f4a95e;
     cursor: pointer;
 }
 
 .navbar {
     position: relative;
-}
 
+}
 .navbar i {
     font-size: 24px;
 }
@@ -46,23 +51,22 @@
 .pic:hover
 
 /* -----------------------------------------------------------after header start----------------------------------------------------------- */
-.after-header {
+.after-header{
     background-color: #F0F0F0;
     padding-top: 50px; 
-
 }
 
 .wall{
-    height: 320px;
-    width: 18px;
+    height: 356px;
+    width: 15px;
     background-color: #f4a95e;
 }
 @keyframes left-to-right {
         0%{
-                transform: translateX(-100%);
+                transform: translate(-100%);
         }
         100%{
-            transform: translateX(0%);
+            transform: translate(0%);
         }
 }
 .text {
@@ -136,25 +140,23 @@
     height: 50%;
     width: 50%;
 }
-/* -----------------------------------------------------------about start----------------------------------------------------------- */
+/* --------------------------------------------about start------------------------------------------------- */
 .about {
     background-color: #F0F0F0;
-    padding-top: 150px;
+    position: relative;
 }
-
+.about .row>* {
+    padding-right: unset !important;
+    padding-left: unset !important;
+}
 .line {
     border: 1px solid #f4a95e;
     background-color: #f4a95e;
     width: 170px;
 }
-.abt-pic{
-    position: relative;
-}
-
 .host-box {
-    position: absolute;
-    cursor: pointer;
-    width: 50% !important;
+    /* cursor: pointer; */
+   
 }
 .box {
     background-color: #f4a95e;
@@ -163,6 +165,8 @@
     line-height: 28px;
     color: white;
     position: relative;
+   margin-top: 99px;
+   width: 100%;
 }
 
 .box p {
@@ -199,13 +203,17 @@
     height: 50%;
     width: 50%;
 }
+.host-box .shape-animate a{
+    text-decoration: none;
+    color: white;
+}
 .about .hidden-border {
     visibility: hidden;
     height: 42px;
     width: 136px;
     border-bottom: 3px solid white;
     border-right: 3px solid white;
-    top: 2px;
+    top: 0px;
     position: relative;
 }
 
@@ -228,7 +236,7 @@
     visibility: visible;
     cursor: pointer;
 }
-/*-------------------------------------------------------------services start-------------------------------------------------------------*/
+/*----------------------------------------services star--------------------------------------------------*/
 .services .line {
     border: 1px solid #f4a95e;
     background-color: #f4a95e;
@@ -246,10 +254,16 @@
     box-shadow: -1px 0px 8px 7px rgba(36,30,30,0.3);
     transition: all 0.5s ease-in-out;
     position: relative;
+    /* max-height: 400px; */
+    max-height: 500px !important;
+    min-height: 350px;
 }
 .service-cards img{
     height: 5em;
     width: 5em;
+}
+.service-cards h3{
+    margin: 15px 0px 15px 0px ;
 }
 .card-shape-1{
     clip-path: polygon(0 0, 100% 0, 100% 100%, 96% 100%, 96% 4%, 0 4%);
@@ -290,7 +304,7 @@
     width: 50%;
 }
 
-/*-------------------------------------------------------------portfolio start-------------------------------------------------------------*/
+/*----------------------------portfolio start----------------------------------------------*/
 .portfolio {
     background-color: #F0F0F0;
 }
@@ -302,14 +316,13 @@
 }
 
 .portfolio-pic {
-    height: 350px;
+    height: 300px;
     width: 100%;
     position: relative;
     transform: scale(1);
 }
 .portfolio-pic:hover {
     transform: scale(1.05);
-    cursor: pointer;
 }
 #four, #five{
     background-color:#d1d4d4;
@@ -324,8 +337,8 @@
 .shed {
     background: rgb(245, 168, 91, 0.6);
     position: absolute;
-    height: 350px;
     width: 100%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -335,19 +348,15 @@
 
 .shed i {
     color: white;
-    transition: all 0.5s ease-in-out;
+    /* transition: all 0.5s ease-in-out; */
 }
-
-.portfolio-pic:hover .shed {
+.portfolio-pic:hover .shed{
     display: block;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.portfolio-pic .shed i:hover {
-    font-size: 80px;
-}
 
 /*-------------------------------------------------------------blog start-------------------------------------------------------------*/
 
@@ -445,160 +454,4 @@
 
 #msg::placeholder {
     color: white;
-}
-
-/* -----------------------------------------------------------media queries start----------------------------------------------------------- */
-                /* ------------------------------------------------------------------------------------------------------- */
-                /* ------------------------------------------------------------------------------------------------------- */
-                /* ------------------------------------------------------------------------------------------------------- */
-                /* ------------------------------------------------------------------------------------------------------- */
-                /* ------------------------------------------------------------------------------------------------------- */
-                /* ------------------------------------------------------------------------------------------------------- */
-                /* ------------------------------------------------------------------------------------------------------- */
-                /* ------------------------------------------------------------------------------------------------------- */
-                /* ------------------------------------------------------------------------------------------------------- */
-                /* ------------------------------------------------------------------------------------------------------- */
-                /* ------------------------------------------------------------------------------------------------------- */
-                /* ------------------------------------------------------------------------------------------------------- */
-/* -----------------------------------------------------------media queries start----------------------------------------------------------- */
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px){
-    .icons i {
-        display: none;
-    }
-    .host-box {
-        cursor: pointer;
-        margin: 100px 0px 100px 0px;
-        position:static;
-    }
-    .wall{
-        width: 13px;
-        height: 290px;
-        margin-top: 65px;
-    }
-}
-
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
-    .host-box {
-        cursor: pointer;
-        margin: 100px 0px 100px 0px;
-        position:static;
-        cursor: pointer;
-    }
-    .wall{
-        width: 13px;
-        height: 275px;
-        margin-top: 65px;
-    }
-}
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-    .about{
-        padding-bottom: 20px;
-    }
-    .abt-pic{
-        position: relative;
-    }
-    .abt-pic img{
-        height: 104%;
-        width: 100%;
-    }
-    .host-box{
-        position: absolute;
-        width: 50%;
-        right: 40px;
-    
-    }
-    .box {
-        background-color: #f4a95e;
-        padding: 1.5rem;
-        text-align: justify;
-        color: white;
-        line-height: 24px;
-        position: relative;
-    }
-    .box p{
-        font-size: 19px;
-        word-spacing: 2px;
-    }
-    .box h1{
-        font-size:x-large;
-    }
-    .box i{
-        font-size: 25px;
-    }
-    .wall{
-        width: 10px;
-        height: 285px;
-        margin-top: 65px;
-    }
-    
-}
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-    .host-box{
-        top: 917px;
-    }
-    .box {
-        background-color: #f4a95e;
-        padding: 2.25rem;
-        text-align: justify;
-        line-height: 28px;
-        color: white;
-        position: relative;
-        right: 40px;
-    }
-    .wall{
-        width: 20px;
-        height: 340px;
-        margin-top: 65px;
-    }
-}
-
-/* XX-Large devices (larger desktops, 1400px and up) */
-@media only screen and (min-width: 1400px) {
-    .abt-pic img{
-        height: 103%;
-    }
-    .host-box{
-        position: absolute;
-        top: 1031px;
-    }
-    .box {
-        background-color: #f4a95e;
-        padding: 3.5rem;
-        text-align: justify;
-        line-height: 28px;
-        color: white;
-        position: relative;
-        right: 40px;
-    }
-    .wall{
-        width: 20px;
-        margin-top: 61px;
-    }
-    
-}
-
-/* XX-Large devices (larger desktops, 1600px and up) */
-@media only screen and (min-width: 1600px){
-    .host-box{
-       top: 918px;
-    }
-    .box {
-        background-color: #f4a95e;
-        padding: 3.5rem;
-        text-align: justify;
-        line-height: 33px;
-        color: white;
-        position: relative;
-        right: 40px;
-    }
-    .wall{
-        width: 16px;
-        height: 293px;
-        margin-top: 63px;
-    }
 }

@@ -10,6 +10,7 @@
   <link href="./assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
   <!--	Custom Style Sheet	-->
   <link href="./assets/css/style.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="./assets/css/responsive.css">
   <!-- fontawesome -->
   <link rel="stylesheet" href="./assets/css/all.css">
   <!-- favicon -->
@@ -24,10 +25,9 @@
 
 <body>
   <!------------------------------------------------------------- navbar start ------------------------------------------------------------->
-  <nav class="navbar navbar-expand-lg ">
+  <nav class="navbar navbar-expand-lg " id="home">
     <div class="container-fluid ">
       <div class="logo ms-5" href="#">
-        <!-- <img src="./assets/images/logo/JPEG File.jpg" height="50px" width="100px"> -->
         <h1>Maaz.</h1>
       </div>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -35,40 +35,54 @@
         <span class="navbar-toggler-icon"><img src="./assets/images/111-removebg-preview.png" height="100%"
             width="100%"></span>
       </button>
+
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+        <div class="d-flex d-block d-lg-none ms-auto icons-min">
+          <a href="https://www.facebook.com/profile.php?id=100010728158421">
+            <i class="fab fa-facebook-f   mx-lg-2    mx-xl-3"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/maaz-haider-a71163234/">
+            <i class="fab fa-linkedin-in   mx-lg-2    mx-xl-3"></i>
+          </a>
+        </div>
         <ul class="navbar-nav mx-auto">
           <li class="nav-item mx-3">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <a class="nav-link active" aria-current="page" href="#home">Home</a>
             <div class="nav-hidden d-md-none d-none px-4 ms-1 mt-3"></div>
           </li>
           <li class="nav-item mx-xl-3 mx-lg-2">
-            <a class="nav-link" href="#">About</a>
+            <a class="nav-link" href="#about">About</a>
             <div class="nav-hidden d-md-none d-none px-4  ms-2 mt-3"></div>
           </li>
           <li class="nav-item mx-xl-3 mx-lg-2">
-            <a class="nav-link" href="#">Services</a>
+            <a class="nav-link" href="#services">Services</a>
             <div class="nav-hidden d-md-none d-none px-4 ms-3 mt-3"></div>
           </li>
           <li class="nav-item mx-xl-3 mx-lg-2">
-            <a class="nav-link" href="#">Portfolio</a>
+            <a class="nav-link" href="#portfolio">Portfolio</a>
             <div class="nav-hidden d-md-none d-none px-4 ms-3 mt-3"></div>
           </li>
-          <li class="nav-item mx-xl-3 mx-lg-2">
+          <!-- <li class="nav-item mx-xl-3 mx-lg-2">
             <a class="nav-link" href="#">Blog</a>
             <div class="nav-hidden d-md-none d-none px-3 ms-2 mt-3"></div>
-          </li>
+          </li> -->
           <li class="nav-item mx-xl-3 mx-lg-2">
-            <a class="nav-link" href="#">Contact</a>
+            <a class="nav-link" href="#contact">Contact</a>
             <div class="nav-hidden d-md-none d-none px-4 ms-3 mt-3"></div>
           </li>
         </ul>
 
+        <div class="d-flex d-none d-lg-block me-5 icons-max">
+          <a href="https://www.facebook.com/profile.php?id=100010728158421">
+            <i class="fab fa-facebook-f   mx-lg-2    mx-xl-3"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/maaz-haider-a71163234/">
+            <i class="fab fa-linkedin-in   mx-lg-2    mx-xl-3"></i>
+          </a>
+        </div>
       </div>
-      <div class="d-flex d-md-none d-sm-none d-lg-block me-5 icons">
-        <i class="fab fa-facebook-f   mx-lg-2    mx-xl-3"></i>
-        <i class="fab fa-twitter   mx-lg-2    mx-xl-3"></i>
-        <i class="fab fa-linkedin-in   mx-lg-2    mx-xl-3"></i>
-      </div>
+
     </div>
   </nav>
   <!-------------------------------------------------------------after header start------------------------------------------------------------->
@@ -103,7 +117,7 @@
     </div>
   </div>
   <!-------------------------------------------------------------about start------------------------------------------------------------->
-  <div class="about">
+  <div class="about pt-5" id="about">
     <center>
       <h1>About Me</h1>
     </center>
@@ -115,37 +129,50 @@
     </center>
     <div class="container">
       <div class="row">
-        <div class="col-lg-6  mt-5 abt-pic">
+        <div class="col-lg-6 abt-pic">
           <img src="./assets/images/maaz.png" height="100%" width="100%">
         </div>
-      </div>
-      <div class="col-lg-5 host-box">
-        <div class="box  shape-animate">
-          <div class="drawing-1 bg-light"></div>
-          <h1>Get To Know Abbout Me</h1>
-          <p class="my-3">I am the student of BSCS studying from the University of Faisalabad (TUF), have a certificate
-            in web development from Career Institute.I have spent some time as a front-end internee in CSoft Systems and
-            have working experience with AsdevTec at Kohinoor FSD.</p>
-          <span class="d-flex my-3 abt-cont">
-            <i class="fas fa-envelope fa-2x"></i> &nbsp;
-            haidermaaz29@gmail.com
-          </span>
-          <span class="d-flex my-3 abt-cont">
-            <i class="fas fa-phone-alt fa-2x"></i> &nbsp;
-            0307 8606369
-          </span>
-          <div class="host-button mt-3">
-            <button class="b-2">Download CV</button>
-            <div class="hidden-border"></div>
+
+        <div class="col-lg-6 host-box">
+          <div class="box  shape-animate">
+            <div class="drawing-1 bg-light d-md-block"></div>
+            <h1>Get To Know Abbout Me</h1>
+            <p class="my-3">I am the student of BSCS studying from the University of Faisalabad (TUF), have a
+              certificate
+              in web development from Career Institute.I have spent some time as a front-end internee in CSoft Systems
+              and
+              have working experience with AsdevTec at Kohinoor FSD.</p>
+            <span class="d-flex my-3 abt-cont">
+              <a
+                href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSDZPDnFprXKmnmpXQSGlFZRkHRgdFttFMDTKHmPQBGqlnXfHQNFVtnlRlfdZTXBHjGRNhhM">
+                <i class="fas fa-envelope fa-2x"></i> &nbsp;
+                haidermaaz29@gmail.com
+              </a>
+            </span>
+            <span class="d-flex my-3 abt-cont">
+              <a href="#">
+                <i class="fas fa-phone-alt fa-2x"></i> &nbsp;
+                0307 8606369
+              </a>
+            </span>
+
+            <a href="https://www.goodcv.com/cv/8a4c23de92e4a346f51401ef32aa662b">
+              <div class="host-button">
+                <button class="b-2">Download CV</button>
+                <div class="hidden-border"></div>
+              </div>
+            </a>
+            <div class="drawing-2 bg-light d-md-block"></div>
           </div>
-          <div class="drawing-2 bg-light"></div>
         </div>
+
       </div>
+
     </div>
   </div>
   </div>
-  <!-------------------------------------------------------------services start------------------------------------------------------------->
-  <div class="services my-5">
+  <!------------------------------------services start------------------------------------->
+  <div class="services my-5" id="services">
     <center>
       <h1>Services</h1>
     </center>
@@ -158,11 +185,12 @@
     <div class="container">
       <div class="row g-4 my-5">
         <div class="col-lg-4 col-md-6">
-          <div class="service-cards p-4 position-relative">
+          <div class="service-cards p-3">
             <div class="card-shape-1"></div>
-            <img src="./assets/images/icons/my/psd.png"> <br>
-            <h3>PSD to HTML</h3> <br>
-            <p class="px-4">PSD to HTML is a common design-to-code process, converting a Photoshop Document into an HTML
+            <img src="./assets/images/icons/my/psd.png">
+            <h3>PSD to HTML</h3>
+            <p class="px-lg-4">PSD to HTML is a common design-to-code process, converting a Photoshop Document into an
+              HTML
               file. This method allows web designers and developers to work together to make a great looking and highly
               functional website. </p>
             <div class="card-shape-2"></div>
@@ -171,9 +199,11 @@
         <div class="col-lg-4 col-md-6">
           <div class="service-cards p-4">
             <div class="card-shape-1"></div>
-            <img src="./assets/images/icons/my/figma.png"> <br>
-            <h3>Figma to HTML</h3> <br>
-            <p class="px-4">Figma to html is a figma plugin that helps convert your figma design to code easily without
+            <img src="./assets/images/icons/my/figma.png">
+
+            <h3>Figma to HTML</h3>
+            <p class="px-lg-4">Figma to html is a figma plugin that helps convert your figma design to code easily
+              without
               loosing any bit of your design or colors.This is done by using the priniciples of good design so as to get
               the so desired result of an exact replica of your design.</p>
             <div class="card-shape-2"></div>
@@ -182,9 +212,10 @@
         <div class="col-lg-4 col-md-6">
           <div class="service-cards p-4">
             <div class="card-shape-1"></div>
-            <img src="./assets/images/icons/my/pixel2.png"> <br>
-            <h3>Pixel Perfect</h3> <br>
-            <p class="px-4">Pixel-perfect means that a design maximizes sharpness and is implemented to deliver maximum
+            <img src="./assets/images/icons/my/pixel2.png">
+            <h3>Pixel Perfect</h3>
+            <p class="px-lg-4">Pixel-perfect means that a design maximizes sharpness and is implemented to deliver
+              maximum
               fidelity in the actual product. Creating pixel-perfect apps means creating designs that are implemented to
               look identical on different devices.</p>
             <div class="card-shape-2"></div>
@@ -193,9 +224,9 @@
         <div class="col-lg-4 col-md-6">
           <div class="service-cards p-4">
             <div class="card-shape-1"></div>
-            <img src="./assets/images/icons/my/responsive.png"> <br>
-            <h3>Responsive Web Design</h3> <br>
-            <p class="px-4">It is the approach that suggests that design should respond to the user's behavior and
+            <img src="./assets/images/icons/my/responsive.png">
+            <h3>Responsive Web Design</h3>
+            <p class="px-lg-4">It is the approach that suggests that design should respond to the user's behavior and
               environment based on screen size, platform and orientation. The practice consists of a mix of flexible
               grids and layouts and an intelligent use of CSS media queries.</p>
             <div class="card-shape-2"></div>
@@ -204,9 +235,9 @@
         <div class="col-lg-4 col-md-6">
           <div class="service-cards p-4">
             <div class="card-shape-1"></div>
-            <img src="./assets/images/icons/my/layout.png"> <br>
-            <h3>Strong Layout & Structure</h3> <br>
-            <p class="px-4">Layout is a pattern that defines a website's structure.It has the role of structuring the
+            <img src="./assets/images/icons/my/layout.png">
+            <h3>Strong Layout & Structure</h3>
+            <p class="px-lg-4">Layout is a pattern that defines a website's structure.It has the role of structuring the
               information present on a site.It provides clear paths for navigation within web pages and puts the most
               important elements of a website front and center.</p>
             <div class="card-shape-2"></div>
@@ -215,9 +246,9 @@
         <div class="col-lg-4 col-md-6">
           <div class="service-cards p-4">
             <div class="card-shape-1"></div>
-            <img src="./assets/images/icons/my/upgrade.png"> <br>
-            <h3>Updating</h3> <br>
-            <p class="px-4">
+            <img src="./assets/images/icons/my/upgrade.png">
+            <h3 id="up-h3">Updating</h3>
+            <p class="px-lg-4">
               Website Updating can mean many things. Updating your current website with new information, changing you
               hosting, or changing your website design. This can also fall under my other services I can provide for
               you.
@@ -228,8 +259,8 @@
       </div>
     </div>
   </div>
-  <!-------------------------------------------------------------portfolio start------------------------------------------------------------->
-  <div class="portfolio py-5">
+  <!-------------------------------------------portfolio start------------------------------------------------>
+  <div class="portfolio py-5" id="portfolio">
     <center>
       <h1>Portfolio</h1>
       <div class="line"></div>
@@ -239,10 +270,13 @@
       <div class="row">
         <div class="col-lg-4 col-md-6">
           <div class="portfolio-pic mt-4">
-            <a href="https://haidermaaz.github.io/teachers-dashboard/">
-              <div class="shed"><i class="fas fa-share fa-4x"></i></div>
-              <img src="./assets/images/portfolio/my/dashboard.png" height="100%" width="100%">
-            </a>
+            <div class="shed">
+              <a href="https://haidermaaz.github.io/teachers-dashboard/">
+                <i class="fas fa-share fa-4x"></i>
+              </a>
+            </div>
+            <img src="./assets/images/portfolio/my/dashboard.png" height="auto" width="100%">
+
           </div>
         </div>
         <div class="col-lg-4 col-md-6">
@@ -273,25 +307,25 @@
           <div class="portfolio-pic mt-4" id="four">
             <div class="shed">
               <!-- <i class="fas fa-share fa-4x"></i> -->
-                          <!-- <p>Blank</p> -->
+              <p>Blank</p>
             </div>
-            <!-- <p>Blank</p> -->
+            <p>Blank</p>
           </div>
         </div>
         <div class="col-lg-4 col-md-6">
           <div class="portfolio-pic mt-4" id="five">
             <div class="shed">
               <!-- <i class="fas fa-share fa-4x"></i> -->
-                          <!-- <p>Blank</p> -->
+              <p>Blank</p>
             </div>
-            <!-- <p>Blank</p> -->
+            <p>Blank</p>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <!-------------------------------------------------------------blog start------------------------------------------------------------->
-  <div class="blog py-5">
+  <!-----------------------------------------------blog start------------------------------------------------>
+  <!-- <div class="blog py-5">
     <center>
       <h1>Blog</h1>
     </center>
@@ -347,9 +381,9 @@
         </div>
       </div>
     </div>
-  </div>
-  <!-------------------------------------------------------------contact start------------------------------------------------------------->
-  <div>
+  </div> -->
+  <!---------------------------------------------contact start---------------------------------------------->
+  <div id="contact">
     <center>
       <h1>Contact Me</h1>
     </center>
@@ -390,11 +424,13 @@
   </div>
 
   <center>
-    <p class="fs-5 my-5">All Rights Reserved , CSoft Systems</p>
+    <p class="my-1">All Rights Reserved , Maaz Haider</p>
   </center>
 
   <!--	Bootstrap 5.0.2 JS FIle	-->
   <script src="./assets/js/bootstrap.bundle.js"></script>
+  <!--	custom JS FIle	-->
+  <script src="./assets/js/custom.js"></script>
 </body>
 
 </html>

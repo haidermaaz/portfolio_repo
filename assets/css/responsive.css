@@ -1,0 +1,220 @@
+@media screen and (min-width: 320px) and (max-width: 575.98px) {
+    /* --------------navbar-------------- */
+
+    .logo {
+        margin-left: 2px !important;
+    }
+
+    .navbar-nav {
+        margin-left: 5px !important;
+    }
+
+    .wall {
+        height: 341px;
+        margin-top: 30px;
+    }
+
+    .navbar button {
+        margin-left: 58% !important;
+    }
+
+    .navbar-toggler {
+        padding: unset !important;
+    }
+
+    .icons-min {
+        margin-top: 10px !important;
+        justify-content: space-between;
+        padding: 10px 3px 0x 0px;
+        width: 21%;
+    }
+
+    /* --------------about start-------------- */
+    .box {
+        padding: 25px;
+    }
+
+    .host-box {
+        margin-top: -80px !important;
+    }
+
+    .box p {
+        font-size: 20px;
+        text-align: left;
+    }
+.drawing-2, .drawing-1{
+    display: none;
+}
+
+    /*------------services start------------------*/
+    .service-cards p {
+        padding: unset !important;
+        text-align: left;
+        max-height: 200px !important;
+        overflow: scroll;
+    }
+
+    .service-cards img {
+        height: 3.5em;
+        width: 3.5em;
+    }
+
+    .card-shape-1,
+    .card-shape-2 {
+        height: 30%
+    }
+
+    .service-cards:hover .card-shape-1 {
+        height: 40%;
+    }
+
+    .service-cards:hover .card-shape-2 {
+        height: 40%;
+    }
+    /*------------portfolio start------------------*/
+
+    .portfolio-pic {
+        height: 250px;
+    }
+
+    .portfolio-pic img {
+        height: 100%;
+    }
+    #four,#five{
+        display: none;
+    }
+}
+@media screen and (min-width:576px) and (max-width:767px) {
+    
+
+    .navbar-toggler {
+        padding: unset !important;
+    }
+    .logo {
+        margin-left: 18px !important;
+    }
+    .icons-min i{
+        font-size: 30px;
+    }
+    .icons-min {
+        margin-top: 15px !important;
+        justify-content: space-between;
+        padding: 10px 20px 0x 0px;
+        width: 15%;
+        margin-right: 20px;
+    }
+    .navbar-nav {
+        margin-left: 18px !important;
+    }
+    .navbar-nav li a{
+        font-size: 22px;
+    }
+    .wall {
+        height: 351px;
+        margin-top: 40px;
+    }
+    body p{
+        font-size: 22px;
+    }
+    /*------------about start------------------*/
+    .drawing-1 {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 96% 100%, 96% 5%, 0 5%);
+    }
+    .drawing-2 {
+        clip-path: polygon(0 0, 5% 0, 5% 96%, 100% 96%, 100% 100%, 0 100%);
+    }
+    /*------------services start------------------*/
+    .service-cards p {
+        padding: unset !important;
+        text-align: left;
+        max-height: 200px !important;
+        overflow: scroll;
+    }
+    .service-cards{
+        height: 400px !important;
+    }
+    .service-cards p{
+        font-size: 22px;
+        text-align: left;
+        padding: 0px 20px 0px 20px !important;
+    }
+    /*------------portfolio start------------------*/
+
+    .portfolio-pic {
+        height: 350px;
+    }
+
+    .portfolio-pic img {
+        height: 100%;
+    }
+    #four,#five{
+        display: none;
+    }
+
+}
+@media screen and (min-width:768px) and (max-width:1024px) {
+    .logo {
+        margin-left: 23px !important;
+    }
+    .icons-min i{
+        font-size: 30px;
+    }
+    .icons-min {
+        margin-top: 15px !important;
+        justify-content: space-between;
+        padding: 10px 20px 0x 0px;
+        width: 15%;
+        margin-right: 20px;
+    }
+    .navbar-nav {
+        margin-left: 30px !important;
+    }
+    .navbar-nav li a{
+        font-size: 22px;
+    }
+    .wall {
+        height: 329px;
+        margin-top: 40px;
+    }
+    body p{
+        font-size: 22px;
+    }
+    /*------------about start------------------*/
+    .drawing-1 {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 96% 100%, 96% 5%, 0 5%);;
+    }
+    .drawing-2 {
+        clip-path: polygon(0 0, 3% 0, 3% 96%, 100% 96%, 100% 100%, 0 100%);
+    }
+    /*------------services start------------------*/
+    .service-cards p {
+        padding: unset !important;
+        text-align: left;
+        max-height: 200px !important;
+        overflow: scroll;
+    }
+    #up-h3{
+        margin: 25px 0px ;
+    }
+    .service-cards{
+        height: 400px;
+    }
+    .service-cards p{
+        font-size: 17px;
+        text-align: left;
+    }
+    /*------------portfolio start------------------*/
+
+    .portfolio-pic {
+        height: 250px;
+    }
+
+    .portfolio-pic img {
+        height: 100%;
+    }
+    #four,#five{
+        display: none;
+    }
+
+}
+
