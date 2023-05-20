@@ -254,9 +254,8 @@
     box-shadow: -1px 0px 8px 7px rgba(36,30,30,0.3);
     transition: all 0.5s ease-in-out;
     position: relative;
-    /* max-height: 400px; */
-    max-height: 500px !important;
-    min-height: 350px;
+    height: 400px;
+    min-height: 300px;
 }
 .service-cards img{
     height: 5em;
@@ -320,6 +319,9 @@
     width: 100%;
     position: relative;
     transform: scale(1);
+}
+.portfolio-pic img{
+    height: 100%;
 }
 .portfolio-pic:hover {
     transform: scale(1.05);
