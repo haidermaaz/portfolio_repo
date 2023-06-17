@@ -1,3 +1,18 @@
+<?php
+if(isset($_POST['contact_btn'])){
+  $name = $_POST['name'];
+  $email = $_POST['email'];
+  $subject = $_POST['subject'];
+  $msg = $_POST['msg']; 
+  
+  $to = "haidermaaz29@gmail.com";
+  $header = "from:$email";
+  if(mail($to,$subject,$msg,$header)){
+    $notice = "Message sent successfully";
+  } 
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,80 +25,108 @@
   <link href="./assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
   <!--	Custom Style Sheet	-->
   <link href="./assets/css/style.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="./assets/css/responsive.css">
   <!-- fontawesome -->
   <link rel="stylesheet" href="./assets/css/all.css">
+  <!-- favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png">
+  <link rel="manifest" href="./assets/favicon/site.webmanifest">
+  <link rel="mask-icon" href="./assets/favicon/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
 </head>
 
 <body>
   <!------------------------------------------------------------- navbar start ------------------------------------------------------------->
-  <nav class="navbar navbar-expand-lg ">
+  <nav class="navbar navbar-expand-lg " id="home">
     <div class="container-fluid ">
-      <a class="navbar-brand ms-5" href="#">
-        <img src="./assets/images/logo/JPEG File.jpg" height="50px" width="100px">
-      </a>
+      <div class="logo ms-5" href="#">
+        <h1>Maaz.</h1>
+      </div>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"><img src="./assets/images/111-removebg-preview.png" height="100%"
             width="100%"></span>
       </button>
+
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+        <div class="d-flex d-block d-lg-none ms-auto icons-min">
+          <a href="https://www.facebook.com/profile.php?id=100010728158421">
+            <i class="fab fa-facebook-f   mx-lg-2    mx-xl-3"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/maaz-haider-a71163234/">
+            <i class="fab fa-linkedin-in   mx-lg-2    mx-xl-3"></i>
+          </a>
+        </div>
         <ul class="navbar-nav mx-auto">
           <li class="nav-item mx-3">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <a class="nav-link active" aria-current="page" href="#home">Home</a>
             <div class="nav-hidden d-md-none d-none px-4 ms-1 mt-3"></div>
           </li>
           <li class="nav-item mx-xl-3 mx-lg-2">
-            <a class="nav-link" href="#">About</a>
+            <a class="nav-link" href="#about">About</a>
             <div class="nav-hidden d-md-none d-none px-4  ms-2 mt-3"></div>
           </li>
           <li class="nav-item mx-xl-3 mx-lg-2">
-            <a class="nav-link" href="#">Services</a>
+            <a class="nav-link" href="#services">Services</a>
             <div class="nav-hidden d-md-none d-none px-4 ms-3 mt-3"></div>
           </li>
           <li class="nav-item mx-xl-3 mx-lg-2">
-            <a class="nav-link" href="#">Portfolio</a>
+            <a class="nav-link" href="#portfolio">Portfolio</a>
             <div class="nav-hidden d-md-none d-none px-4 ms-3 mt-3"></div>
           </li>
-          <li class="nav-item mx-xl-3 mx-lg-2">
+          <!-- <li class="nav-item mx-xl-3 mx-lg-2">
             <a class="nav-link" href="#">Blog</a>
             <div class="nav-hidden d-md-none d-none px-3 ms-2 mt-3"></div>
-          </li>
+          </li> -->
           <li class="nav-item mx-xl-3 mx-lg-2">
-            <a class="nav-link" href="#">Contact</a>
+            <a class="nav-link" href="#contact">Contact</a>
             <div class="nav-hidden d-md-none d-none px-4 ms-3 mt-3"></div>
           </li>
         </ul>
 
+        <div class="d-flex d-none d-lg-block me-5 icons-max">
+          <a href="https://www.facebook.com/profile.php?id=100010728158421">
+            <i class="fab fa-facebook-f   mx-lg-2    mx-xl-3"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/maaz-haider-a71163234/">
+            <i class="fab fa-linkedin-in   mx-lg-2    mx-xl-3"></i>
+          </a>
+        </div>
       </div>
-      <div class="d-flex d-md-none d-sm-none d-lg-block me-5 icons">
-        <i class="fab fa-facebook-f   mx-lg-2    mx-xl-3"></i>
-        <i class="fab fa-twitter   mx-lg-2    mx-xl-3"></i>
-        <i class="fab fa-linkedin-in   mx-lg-2    mx-xl-3"></i>
-      </div>
+
     </div>
   </nav>
   <!-------------------------------------------------------------after header start------------------------------------------------------------->
   <div class="after-header">
     <div class="container">
       <div class="row justify-content-xl-between">
-        <div class="col-xl-5 col-lg-11 mt-lg-5">
+        <div class="col-xl-5 col-lg-11 mt-lg-5 d-flex">
+          <div class="wall">
+
+          </div>
           <div class="text my-5">
             <h2>Hello</h2>
-            <h1><b>I am Alex John</b></h1><br>
-            <h2>A UI-UX Designer</h2>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et, tenetur. Vel deleniti magnam nihil
-              perspiciatis, facilis molestias similique. Porro laudantium pariatur deserunt hic officia suscipit
-              commodi, earum exercitationem qui provident!</p>
-            <div class="host-button">
-              <button class="b-1">About me</button>
-              <div class="hidden-border"></div>
-            </div>
+            <h1><b>I am Maaz Haider</b></h1><br>
+            <h2>Front-End Developer</h2>
+            <p>I have good experience on front-end development with technologies HTML,CSS,Bootstrap,JavaScript and have
+              worked with software company as a internee !</p>
+            <a href="#about">
+              <div class="host-button">
+                <button class="b-1"><b>About me</b></button>
+                <div class="hidden-border"></div>
+              </div>
+            </a>
           </div>
         </div>
         <div class="col-xl-5 pic mt-sm-5">
           <div class="d-inline-block position-relative ms-xl-auto shape-animate overflow-hidden">
             <div class="shape-1 bg-dark"></div>
-            <img src="./assets/images/1.jpg" height="auto" width="100%" class="profileImg">
+            <img src="./assets/images/maaz.png" height="auto" width="100%" class="profileImg">
+            <!-- <img src="./assets/images/1.jpg" height="auto" width="100%" class="profileImg"> -->
             <div class="shape-2"></div>
           </div>
         </div>
@@ -91,7 +134,7 @@
     </div>
   </div>
   <!-------------------------------------------------------------about start------------------------------------------------------------->
-  <div class="about">
+  <div class="about pt-5" id="about">
     <center>
       <h1>About Me</h1>
     </center>
@@ -99,43 +142,54 @@
       <div class="line"></div>
     </center>
     <center>
-      <p class="fs-3 text-secondary">I am passionate Full Stack UI-UX Designer</p>
+      <p class="fs-3 text-secondary">I am passionate to become a Full Stack Developer</p>
     </center>
     <div class="container">
       <div class="row">
-        <div class="col-lg-6 mt-5 abt-pic">
-          <img src="./assets/images/1.jpg" height="100%" width="100%">
+        <div class="col-lg-6 abt-pic">
+          <img src="./assets/images/maaz.png" height="100%" width="100%">
         </div>
-        <div class="col-lg-5   host-box">
-          
+
+        <div class="col-lg-6 host-box">
           <div class="box  shape-animate">
-            <div class="shape-1 bg-light"></div>
+            <div class="drawing-1 bg-light d-md-block"></div>
             <h1>Get To Know Abbout Me</h1>
-            <p class="my-3">Lorem ipsum dolor sit amet consectetur adipisicing elit odit cupiditate nulla eligendi error
-              molestiae laborum, facilis molestias, autem hic.<br>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit ex maxime magnam vel enim, qui nostrum consectetur
-              adipisicing elit. Odit cupiditate nulla eligendi .</p>
-            <span class="d-flex my-4 abt-cont">
-              <i class="fas fa-envelope fa-2x"></i> &nbsp;
-              info@csoftsystems.com
+            <p class="my-3">I am the student of BSCS studying from the University of Faisalabad (TUF), have a
+              certificate
+              in web development from Career Institute.I have spent some time as a front-end internee in CSoft Systems
+              and
+              have working experience with AsdevTec at Kohinoor FSD.</p>
+            <span class="d-flex my-3 abt-cont">
+              <a
+                href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSDZPDnFprXKmnmpXQSGlFZRkHRgdFttFMDTKHmPQBGqlnXfHQNFVtnlRlfdZTXBHjGRNhhM">
+                <i class="fas fa-envelope fa-2x"></i> &nbsp;
+                haidermaaz29@gmail.com
+              </a>
             </span>
-            <span class="d-flex my-4 abt-cont">
-              <i class="fas fa-phone-alt fa-2x"></i> &nbsp;
-              0 123 456 789
+            <span class="d-flex my-3 abt-cont">
+              <a href="#">
+                <i class="fas fa-phone-alt fa-2x"></i> &nbsp;
+                0307 8606369
+              </a>
             </span>
-            <div class="host-button mt-4">
-              <button class="b-2">Download CV</button>
-              <div class="hidden-border"></div>
-            </div>
-            <div class="shape-2 bg-light"></div>
+
+            <a href="https://www.goodcv.com/cv/8a4c23de92e4a346f51401ef32aa662b">
+              <div class="host-button">
+                <button class="b-2"><b>Download CV</b></button>
+                <div class="hidden-border"></div>
+              </div>
+            </a>
+            <div class="drawing-2 bg-light d-md-block"></div>
           </div>
-         
         </div>
+
       </div>
+
     </div>
   </div>
-  <!-------------------------------------------------------------services start------------------------------------------------------------->
-  <div class="services my-5">
+  </div>
+  <!------------------------------------services start------------------------------------->
+  <div class="services my-5" id="services">
     <center>
       <h1>Services</h1>
     </center>
@@ -146,172 +200,149 @@
       <p class="fs-3 text-secondary">These are some of my services</p>
     </center>
     <div class="container">
-      <div class="row">
-        <div class="col-lg-4 col-md-6 px-4">
-          <div class="card-shape-1"></div>
-          <div class="service-cards py-4 mt-5">
-            <i class="fas fa-pen-nib fa-5x"></i> <br>
-            <h3>Graphics</h3> <br>
-            <p class="px-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium enim atque rem
-              dignissimos, nostrum explicabo, nisi voluptatibus ratione non deleniti.</p>
-          </div>
-          <div class="card-shape-2"></div>
-        </div>
-        <div class="col-lg-4 col-md-6 px-4">
-          <div class="service-cards py-4 mt-5">
-            <i class="fas fa-camera fa-5x"></i> <br>
-            <h3>Photography</h3> <br>
-            <p class="px-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium enim atque rem
-              dignissimos, nostrum explicabo, nisi voluptatibus ratione non deleniti.</p>
+      <div class="row g-4 my-5">
+        <div class="col-lg-4 col-md-6">
+          <div class="service-cards p-3">
+            <div class="card-shape-1"></div>
+            <img src="./assets/images/icons/my/psd.png">
+            <h3>PSD to HTML</h3>
+            <p class="px-lg-4">PSD to HTML is a common design-to-code process, converting a Photoshop Document into an
+              HTML
+              file. This method allows web designers and developers to work together to make a great looking and highly
+              functional website. </p>
+            <div class="card-shape-2"></div>
           </div>
         </div>
-        <div class="col-lg-4 col-md-6 px-4">
-          <div class="service-cards py-4 mt-5">
-            <i class="fas fa-file-contract fa-5x"></i> <br>
-            <h3>Branding</h3> <br>
-            <p class="px-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium enim atque rem
-              dignissimos, nostrum explicabo, nisi voluptatibus ratione non deleniti.</p>
+        <div class="col-lg-4 col-md-6">
+          <div class="service-cards p-4">
+            <div class="card-shape-1"></div>
+            <img src="./assets/images/icons/my/figma.png">
+
+            <h3>Figma to HTML</h3>
+            <p class="px-lg-4">Figma to html is a figma plugin that helps convert your figma design to code easily
+              without
+              loosing any bit of your design or colors.This is done by using the priniciples of good design so as to get
+              the so desired result of an exact replica of your design.</p>
+            <div class="card-shape-2"></div>
           </div>
         </div>
-        <div class="col-lg-4 col-md-6 px-4">
-          <div class="service-cards py-4 mt-5">
-            <i class="fas fa-pen-nib fa-5x"></i> <br>
-            <h3>Graphics</h3> <br>
-            <p class="px-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium enim atque rem
-              dignissimos, nostrum explicabo, nisi voluptatibus ratione non deleniti.</p>
+        <div class="col-lg-4 col-md-6">
+          <div class="service-cards p-4">
+            <div class="card-shape-1"></div>
+            <img src="./assets/images/icons/my/pixel2.png">
+            <h3>Pixel Perfect</h3>
+            <p class="px-lg-4">Pixel-perfect means that a design maximizes sharpness and is implemented to deliver
+              maximum
+              fidelity in the actual product. Creating pixel-perfect apps means creating designs that are implemented to
+              look identical on different devices.</p>
+            <div class="card-shape-2"></div>
           </div>
         </div>
-        <div class="col-lg-4 col-md-6 px-4">
-          <div class="service-cards py-4 mt-5">
-            <i class="fas fa-camera fa-5x"></i> <br>
-            <h3>Photography</h3> <br>
-            <p class="px-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium enim atque rem
-              dignissimos, nostrum explicabo, nisi voluptatibus ratione non deleniti.</p>
+        <div class="col-lg-4 col-md-6">
+          <div class="service-cards p-4">
+            <div class="card-shape-1"></div>
+            <img src="./assets/images/icons/my/responsive.png">
+            <h3>Responsive Web Design</h3>
+            <p class="px-lg-4">It is the approach that suggests that design should respond to the user's behavior and
+              environment based on screen size, platform and orientation. The practice consists of a mix of flexible
+              grids and layouts and an intelligent use of CSS media queries.</p>
+            <div class="card-shape-2"></div>
           </div>
         </div>
-        <div class="col-lg-4 col-md-6 px-4">
-          <div class="service-cards py-4 mt-5">
-            <i class="fas fa-file-contract fa-5x"></i> <br>
-            <h3>Branding</h3> <br>
-            <p class="px-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium enim atque rem
-              dignissimos, nostrum explicabo, nisi voluptatibus ratione non deleniti.</p>
+        <div class="col-lg-4 col-md-6">
+          <div class="service-cards p-4">
+            <div class="card-shape-1"></div>
+            <img src="./assets/images/icons/my/layout.png">
+            <h3>Strong Layout & Structure</h3>
+            <p class="px-lg-4">Layout is a pattern that defines a website's structure.It has the role of structuring the
+              information present on a site.It provides clear paths for navigation within web pages and puts the most
+              important elements of a website front and center.</p>
+            <div class="card-shape-2"></div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="service-cards p-4">
+            <div class="card-shape-1"></div>
+            <img src="./assets/images/icons/my/upgrade.png">
+            <h3 id="up-h3">Updating</h3>
+            <p class="px-lg-4">
+              Website Updating can mean many things. Updating your current website with new information, changing you
+              hosting, or changing your website design. This can also fall under my other services I can provide for
+              you.
+            </p>
+            <div class="card-shape-2"></div>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <!-------------------------------------------------------------portfolio start------------------------------------------------------------->
-  <div class="portfolio py-5">
+  <!-------------------------------------------portfolio start------------------------------------------------>
+  <div class="portfolio py-5" id="portfolio">
     <center>
       <h1>Portfolio</h1>
-    </center>
-    <center>
       <div class="line"></div>
-    </center>
-    <center>
       <p class="fs-3 text-secondary">Showcasing some of my best work</p>
     </center>
     <div class="container">
       <div class="row">
         <div class="col-lg-4 col-md-6">
           <div class="portfolio-pic mt-4">
-            <div class="shed"><i class="fas fa-share fa-4x"></i></div>
-            <img src="./assets/images/portfolio/1.jpg" height="100%" width="100%">
+            <div class="shed">
+              <a href="https://haidermaaz.github.io/teachers-dashboard/">
+                <i class="fas fa-share fa-4x"></i>
+              </a>
+            </div>
+            <img src="./assets/images/portfolio/my/dashboard.png" height="auto" width="100%">
+
           </div>
         </div>
         <div class="col-lg-4 col-md-6">
           <div class="portfolio-pic mt-4">
-            <div class="shed"><i class="fas fa-share fa-4x"></i></div>
-            <img src="./assets/images/portfolio/2.jpg" height="100%" width="100%">
+            <a href="https://haidermaaz.github.io/plants_repo/">
+              <div class="shed"><i class="fas fa-share fa-4x"></i></div>
+              <img src="./assets/images/portfolio/my/plants.png" height="100%" width="100%">
+            </a>
           </div>
         </div>
         <div class="col-lg-4 col-md-6">
           <div class="portfolio-pic mt-4">
-            <div class="shed"><i class="fas fa-share fa-4x"></i></div>
-            <img src="./assets/images/portfolio/3.jpg" height="100%" width="100%">
+            <a href="https://haidermaaz.github.io/education_repo/">
+              <div class="shed"><i class="fas fa-share fa-4x"></i></div>
+              <img src="./assets/images/portfolio/my/edu.png" height="100%" width="100%">
+            </a>
           </div>
         </div>
         <div class="col-lg-4 col-md-6">
           <div class="portfolio-pic mt-4">
-            <div class="shed"><i class="fas fa-share fa-4x"></i></div>
-            <img src="./assets/images/portfolio/4.jpg" height="100%" width="100%">
+            <a href="#">
+              <div class="shed"><i class="fas fa-share fa-4x"></i></div>
+              <img src="./assets/images/portfolio/my/portfolio.png" height="100%" width="100%">
+            </a>
           </div>
         </div>
         <div class="col-lg-4 col-md-6">
-          <div class="portfolio-pic mt-4">
-            <div class="shed"><i class="fas fa-share fa-4x"></i></div>
-            <img src="./assets/images/portfolio/5.jpg" height="100%" width="100%">
+          <div class="portfolio-pic mt-4" id="four">
+            <div class="shed">
+              <!-- <i class="fas fa-share fa-4x"></i> -->
+              <p>Blank</p>
+            </div>
+            <p>Blank</p>
           </div>
         </div>
         <div class="col-lg-4 col-md-6">
-          <div class="portfolio-pic mt-4">
-            <div class="shed"><i class="fas fa-share fa-4x"></i></div>
-            <img src="./assets/images/portfolio/6.jpg" height="100%" width="100%">
+          <div class="portfolio-pic mt-4" id="five">
+            <div class="shed">
+              <!-- <i class="fas fa-share fa-4x"></i> -->
+              <p>Blank</p>
+            </div>
+            <p>Blank</p>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <!-------------------------------------------------------------blog start------------------------------------------------------------->
-  <div class="blog py-5">
-    <center>
-      <h1>Blog</h1>
-    </center>
-    <center>
-      <div class="line"></div>
-    </center>
-    <center>
-      <p class="fs-3 text-secondary">Latest from blog</p>
-    </center>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6 col-lg-4 d-flex flex-column align-items-center">
-          <div class="blog-box">
-            <img src="./assets/images/blog/1.jpg" height="100%" width="100%">
-          </div>
-          <div class="lorem py-4">
-            <h5>Lorem ipsum is simply a dummpt text</h5>
-            <p class="px-5">Lorem ipsum dolor sit amet consectetur adipisicing elit.Architecto cum perspiciatis quae.Eum
-              consectetur quod suscipit libero.</p>
-            <div class="host-button">
-              <button class="b-3">About me</button>
-              <div class="hidden-border"></div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4 d-flex flex-column align-items-center">
-          <div class="blog-box">
-            <img src="./assets/images/blog/2.jpg" height="100%" width="100%">
-          </div>
-          <div class="lorem py-4">
-            <h5>Lorem ipsum is simply a dummpt text</h5>
-            <p class="px-5">Lorem ipsum dolor sit amet consectetur adipisicing elit.Architecto cum perspiciatis quae.Eum
-              consectetur quod suscipit libero.</p>
-            <div class="host-button">
-              <button class="b-3">About me</button>
-              <div class="hidden-border"></div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4 d-flex flex-column align-items-center">
-          <div class="blog-box">
-            <img src="./assets/images/blog/3.jpg" height="100%" width="100%">
-          </div>
-          <div class="lorem py-4">
-            <h5>Lorem ipsum is simply a dummpt text</h5>
-            <p class="px-5">Lorem ipsum dolor sit amet consectetur adipisicing elit.Architecto cum perspiciatis quae.Eum
-              consectetur quod suscipit libero.</p>
-            <div class="host-button">
-              <button class="b-3">About me</button>
-              <div class="hidden-border"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-------------------------------------------------------------contact start------------------------------------------------------------->
-  <div>
+  <!---------------------------------------------contact start---------------------------------------------->
+  <div id="contact" class="pt-5">
     <center>
       <h1>Contact Me</h1>
     </center>
@@ -324,15 +355,28 @@
     <div class="container contact">
       <div class="row ">
         <span class="fs-1">Get in touch</span> <br>
-        <form class="mt-4">
+        <strong>
+          <?php
+           if(!empty($notice)){
+            echo $notice;
+           }
+           ?>
+        </strong>
+        <form class="mt-4" method="POST">
           <div class="d-flex">
-            <input type="text" placeholder="Name" class="form-control me-2 py-3">
-            <input type="Email" placeholder="Email" class="form-control ms-2 py-3">
+            <input type="text" placeholder="Name" name="name" class="form-control me-2 py-3" required>
+            <input type="Email" placeholder="Email" name="email" class="form-control ms-2 py-3" required>
           </div>
-          <input type="text" placeholder="Subject" class="form-control py-3 mt-3" id="in">
-          <textarea id="msg" name="w3review" rows="9" class="form-control mt-3" placeholder="Message"></textarea>
-
-
+          <input type="text" placeholder="Subject"  name="subject" class="form-control py-3 mt-3" id="in" required>
+          <textarea id="msg" rows="9" name="msg" class="form-control my-3" placeholder="Message" required></textarea>
+          <center>
+            <!-- <a href="#" type="submit" name="contact_btn"> -->
+              <div class="host-button" type="submit" name="contact_btn">
+                <button class="b-3"><b>Send</b></button>
+                <div class="hidden-border"></div>
+              </div>
+            <!-- </a> -->
+          </center>
         </form>
         <span class="d-flex justify-content-center py-5">
           <i class="fas fa-phone-alt  mx-2"></i>
@@ -352,11 +396,13 @@
   </div>
 
   <center>
-  <p class="fs-5 my-5">All Rights Reserved , CSoft Systems</p>
+    <p class="my-1">All Rights Reserved , Maaz Haider</p>
   </center>
 
   <!--	Bootstrap 5.0.2 JS FIle	-->
   <script src="./assets/js/bootstrap.bundle.js"></script>
+  <!--	custom JS FIle	-->
+  <script src="./assets/js/custom.js"></script>
 </body>
 
-</html>  
+</html>
