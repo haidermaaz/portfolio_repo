@@ -1,3 +1,18 @@
+<?php
+if(isset($_POST['contact_btn'])){
+  $name = $_POST['name'];
+  $email = $_POST['email'];
+  $subject = $_POST['subject'];
+  $msg = $_POST['msg']; 
+  
+  $to = "haidermaaz29@gmail.com";
+  $header = "from:$email";
+  if(mail($to,$subject,$msg,$header)){
+    $notice = "Message sent successfully";
+  } 
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -99,10 +114,12 @@
             <h2>Front-End Developer</h2>
             <p>I have good experience on front-end development with technologies HTML,CSS,Bootstrap,JavaScript and have
               worked with software company as a internee !</p>
-            <div class="host-button">
-              <button class="b-1">About me</button>
-              <div class="hidden-border"></div>
-            </div>
+            <a href="#about">
+              <div class="host-button">
+                <button class="b-1"><b>About me</b></button>
+                <div class="hidden-border"></div>
+              </div>
+            </a>
           </div>
         </div>
         <div class="col-xl-5 pic mt-sm-5">
@@ -158,7 +175,7 @@
 
             <a href="https://www.goodcv.com/cv/8a4c23de92e4a346f51401ef32aa662b">
               <div class="host-button">
-                <button class="b-2">Download CV</button>
+                <button class="b-2"><b>Download CV</b></button>
                 <div class="hidden-border"></div>
               </div>
             </a>
@@ -324,66 +341,8 @@
       </div>
     </div>
   </div>
-  <!-----------------------------------------------blog start------------------------------------------------>
-  <!-- <div class="blog py-5">
-    <center>
-      <h1>Blog</h1>
-    </center>
-    <center>
-      <div class="line"></div>
-    </center>
-    <center>
-      <p class="fs-3 text-secondary">Latest from blog</p>
-    </center>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6 col-lg-4 d-flex flex-column align-items-center">
-          <div class="blog-box">
-            <img src="./assets/images/blog/1.jpg" height="100%" width="100%">
-          </div>
-          <div class="lorem py-4">
-            <h5>Lorem ipsum is simply a dummpt text</h5>
-            <p class="px-5">Lorem ipsum dolor sit amet consectetur adipisicing elit.Architecto cum perspiciatis quae.Eum
-              consectetur quod suscipit libero.</p>
-            <div class="host-button">
-              <button class="b-3">About me</button>
-              <div class="hidden-border"></div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4 d-flex flex-column align-items-center">
-          <div class="blog-box">
-            <img src="./assets/images/blog/2.jpg" height="100%" width="100%">
-          </div>
-          <div class="lorem py-4">
-            <h5>Lorem ipsum is simply a dummpt text</h5>
-            <p class="px-5">Lorem ipsum dolor sit amet consectetur adipisicing elit.Architecto cum perspiciatis quae.Eum
-              consectetur quod suscipit libero.</p>
-            <div class="host-button">
-              <button class="b-3">About me</button>
-              <div class="hidden-border"></div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4 d-flex flex-column align-items-center">
-          <div class="blog-box">
-            <img src="./assets/images/blog/3.jpg" height="100%" width="100%">
-          </div>
-          <div class="lorem py-4">
-            <h5>Lorem ipsum is simply a dummpt text</h5>
-            <p class="px-5">Lorem ipsum dolor sit amet consectetur adipisicing elit.Architecto cum perspiciatis quae.Eum
-              consectetur quod suscipit libero.</p>
-            <div class="host-button">
-              <button class="b-3">About me</button>
-              <div class="hidden-border"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div> -->
   <!---------------------------------------------contact start---------------------------------------------->
-  <div id="contact">
+  <div id="contact" class="pt-5">
     <center>
       <h1>Contact Me</h1>
     </center>
@@ -396,15 +355,28 @@
     <div class="container contact">
       <div class="row ">
         <span class="fs-1">Get in touch</span> <br>
-        <form class="mt-4">
+        <strong>
+          <?php
+           if(!empty($notice)){
+            echo $notice;
+           }
+           ?>
+        </strong>
+        <form class="mt-4" method="POST">
           <div class="d-flex">
-            <input type="text" placeholder="Name" class="form-control me-2 py-3">
-            <input type="Email" placeholder="Email" class="form-control ms-2 py-3">
+            <input type="text" placeholder="Name" name="name" class="form-control me-2 py-3" required>
+            <input type="Email" placeholder="Email" name="email" class="form-control ms-2 py-3" required>
           </div>
-          <input type="text" placeholder="Subject" class="form-control py-3 mt-3" id="in">
-          <textarea id="msg" name="w3review" rows="9" class="form-control mt-3" placeholder="Message"></textarea>
-
-
+          <input type="text" placeholder="Subject"  name="subject" class="form-control py-3 mt-3" id="in" required>
+          <textarea id="msg" rows="9" name="msg" class="form-control my-3" placeholder="Message" required></textarea>
+          <center>
+            <!-- <a href="#" type="submit" name="contact_btn"> -->
+              <div class="host-button" type="submit" name="contact_btn">
+                <button class="b-3"><b>Send</b></button>
+                <div class="hidden-border"></div>
+              </div>
+            <!-- </a> -->
+          </center>
         </form>
         <span class="d-flex justify-content-center py-5">
           <i class="fas fa-phone-alt  mx-2"></i>

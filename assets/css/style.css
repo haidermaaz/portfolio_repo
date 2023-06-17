@@ -99,6 +99,10 @@
     color: white;
     position: absolute;
 }
+.after-header .b-1 a{
+    color: white;
+    text-decoration: none;
+}
 
 .after-header .host-button {
     width: 136px;
@@ -213,7 +217,7 @@
     width: 136px;
     border-bottom: 3px solid white;
     border-right: 3px solid white;
-    top: 0px;
+    top: 5px;
     position: relative;
 }
 
@@ -221,9 +225,9 @@
     padding: 7px;
     width: 130px;
     border: none;
-    background-color: #f4a95e;
+    background-color: #c8d6e5;
     box-shadow: -3px -3px 20px 0px #da7147;
-    color: white;
+    color:  #da7147;
     position: absolute;
 }
 
@@ -358,59 +362,6 @@
     justify-content: center;
     align-items: center;
 }
-
-
-/*-------------------------------------------------------------blog start-------------------------------------------------------------*/
-
-.blog .line {
-    border: 1px solid #f4a95e;
-    background-color: #f4a95e;
-    width: 65px;
-}
-
-.blog-box {
-    width: 90%;
-    height: auto;
-}
-
-.lorem {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: justify;
-}
-
-.blog .hidden-border {
-    visibility: hidden;
-    height: 42px;
-    width: 136px;
-    border-bottom: 3px solid #f4a95e;
-    border-right: 3px solid #f4a95e;
-    top: 2px;
-    position: relative;
-}
-
-.blog .b-3 {
-    padding: 7px;
-    width: 130px;
-    border: none;
-    background-color: #f4a95e;
-    box-shadow: -3px -3px 20px 0px #da7147;
-    color: white;
-    position: absolute;
-}
-
-.blog .host-button {
-    width: 136px;
-    transition: all 3s ease-in-out;
-}
-
-.blog .host-button:hover .hidden-border {
-    visibility: visible;
-    cursor: pointer;
-}
-
 /*-------------------------------------------------------------contact start-------------------------------------------------------------*/
 .contact {
     background-color: #f4a95e;
@@ -456,4 +407,42 @@
 
 #msg::placeholder {
     color: white;
+}
+.contact .b-3 {
+    padding: 7px;
+    width: 130px;
+    border: none;
+    background-color: #c8d6e5;
+    box-shadow: -3px -3px 20px 0px #da7147;
+    color:  #da7147;
+    /* position: absolute; */
+}.contact .hidden-border {
+    visibility: hidden;
+    height: 42px;
+    width: 136px;
+    border-bottom: 3px solid white;
+    border-right: 3px solid white;
+    /* border: 1px solid red; */
+    margin-top: -37px ;
+    margin-left: 2px;
+}
+
+.contact .b-2 {
+    padding: 7px;
+    width: 130px;
+    border: none;
+    background-color: #c8d6e5;
+    box-shadow: -3px -3px 20px 0px #da7147;
+    color:  #da7147;
+    position: absolute;
+}
+
+.contact .host-button {
+    width: 136px;
+    transition: all 3s ease-in-out;
+}
+
+.contact .host-button:hover .hidden-border {
+    visibility: visible;
+    cursor: pointer;
 }
