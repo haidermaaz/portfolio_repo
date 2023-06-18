@@ -1,4 +1,4 @@
-<?php
+<!-- <?php
 if(isset($_POST['contact_btn'])){
   $name = $_POST['name'];
   $email = $_POST['email'];
@@ -11,7 +11,7 @@ if(isset($_POST['contact_btn'])){
     $notice = "Message sent successfully";
   } 
 }
-?>
+?> -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -355,13 +355,13 @@ if(isset($_POST['contact_btn'])){
     <div class="container contact">
       <div class="row ">
         <span class="fs-1">Get in touch</span> <br>
-        <strong>
+        <!-- <strong>
           <?php
            if(!empty($notice)){
             echo $notice;
            }
            ?>
-        </strong>
+        </strong> -->
         <form class="mt-4" method="POST">
           <div class="d-flex">
             <input type="text" placeholder="Name" name="name" class="form-control me-2 py-3" required>
