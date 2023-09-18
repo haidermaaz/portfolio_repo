@@ -13,6 +13,7 @@ if(isset($_POST['contact_btn'])){
 }
 ?> -->
 
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -287,6 +288,14 @@ if(isset($_POST['contact_btn'])){
       <div class="row">
         <div class="col-lg-4 col-md-6">
           <div class="portfolio-pic mt-4">
+            <a href="https://polo-site.netlify.app/">
+              <div class="shed"><i class="fas fa-share fa-4x"></i></div>
+              <img src="./assets/images/portfolio/my/polo.png" height="auto" width="100%">
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="portfolio-pic mt-4">
             <div class="shed">
               <a href="https://haidermaaz.github.io/teachers-dashboard/">
                 <i class="fas fa-share fa-4x"></i>
@@ -329,15 +338,6 @@ if(isset($_POST['contact_btn'])){
             <p>Blank</p>
           </div>
         </div>
-        <div class="col-lg-4 col-md-6">
-          <div class="portfolio-pic mt-4" id="five">
-            <div class="shed">
-              <!-- <i class="fas fa-share fa-4x"></i> -->
-              <p>Blank</p>
-            </div>
-            <p>Blank</p>
-          </div>
-        </div>
       </div>
     </div>
   </div>
@@ -367,14 +367,14 @@ if(isset($_POST['contact_btn'])){
             <input type="text" placeholder="Name" name="name" class="form-control me-2 py-3" required>
             <input type="Email" placeholder="Email" name="email" class="form-control ms-2 py-3" required>
           </div>
-          <input type="text" placeholder="Subject"  name="subject" class="form-control py-3 mt-3" id="in" required>
+          <input type="text" placeholder="Subject" name="subject" class="form-control py-3 mt-3" id="in" required>
           <textarea id="msg" rows="9" name="msg" class="form-control my-3" placeholder="Message" required></textarea>
           <center>
             <!-- <a href="#" type="submit" name="contact_btn"> -->
-              <div class="host-button" type="submit" name="contact_btn">
-                <button class="b-3"><b>Send</b></button>
-                <div class="hidden-border"></div>
-              </div>
+            <div class="host-button" type="submit" name="contact_btn">
+              <button class="b-3"><b>Send</b></button>
+              <div class="hidden-border"></div>
+            </div>
             <!-- </a> -->
           </center>
         </form>

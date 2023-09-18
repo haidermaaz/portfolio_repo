@@ -81,7 +81,7 @@
         height: 100%;
     }
     #four,#five{
-        display: none;
+        /* display: none; */
     }
 }
 @media screen and (min-width:576px) and (max-width:767px) {
