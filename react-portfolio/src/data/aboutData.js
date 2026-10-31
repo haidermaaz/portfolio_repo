@@ -1,0 +1,6 @@
+export const aboutData = {
+    title: "Who I am",
+    description1: "Hello! My name is Maaz Haider. I'm an aspiring software engineer based in Pakistan.",
+    description2: "A Results-driven Backend Developer specializing in Laravel, PHP, MySQL, RESTful APIs, and GraphQL, with 1.5+ years of professional experience delivering scalable and maintainable web solutions. Experienced in backend architecture, database design, API development, and system integration, with a focus on performance, security, and code quality. Complementing my backend expertise, I utilize Python for automation, scripting, data analysis, and AI-powered workflows. I also have hands-on experience building AI automation workflows and chatbots using n8n, integrating AI models and external APIs to automate tasks and streamline business processes. I have a growing interest in Artificial Intelligence, Large Language Models (LLMs), and intelligent automation, and continuously explore ways to integrate these technologies into practical business solutions. Having started my career in frontend development, I bring a full-stack perspective that helps bridge user experience with robust backend systems. I am committed to continuous growth, embracing emerging technologies, and contributing to innovative products that create measurable business value.",
+    image: 2
+}
